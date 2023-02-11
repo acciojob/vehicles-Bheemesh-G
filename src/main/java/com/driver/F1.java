@@ -29,37 +29,37 @@ public class F1 extends Car {
             this.changeGear(1);
         }
         //for all other cases, change the gear accordingly
+        if(newSpeed>=1 && newSpeed<=50)
+        {
+            this.changeGear(2);
+            setCurrentSpeed(newSpeed);
+        }
+        else if(newSpeed>=51 && newSpeed<=100)
+        {
+            this.changeGear(3);
+            setCurrentSpeed(newSpeed);
+        }
+        else if(newSpeed>=101 && newSpeed<=150)
+        {
+            this.changeGear(4);
+            setCurrentSpeed(newSpeed);
+        }
+        else if(newSpeed>=151 && newSpeed<=200)
+        {
+            this.changeGear(5);
+            setCurrentSpeed(newSpeed);
+        }
+        else if(newSpeed>=201 && newSpeed<=250)
+        {
+            this.changeGear(6);
+            setCurrentSpeed(newSpeed);
+        }
+        else{
+            this.changeGear(7);
+            setCurrentSpeed(newSpeed);
+        }
 
         if(newSpeed > 0) {
-            if(newSpeed>=1 && newSpeed<=50)
-            {
-                this.changeGear(2);
-                setCurrentSpeed(newSpeed);
-            }
-            else if(newSpeed>=51 && newSpeed<=100)
-            {
-                this.changeGear(3);
-                setCurrentSpeed(newSpeed);
-            }
-            else if(newSpeed>=101 && newSpeed<=150)
-            {
-                this.changeGear(4);
-                setCurrentSpeed(newSpeed);
-            }
-            else if(newSpeed>=151 && newSpeed<=200)
-            {
-                this.changeGear(5);
-                setCurrentSpeed(newSpeed);
-            }
-            else if(newSpeed>=201 && newSpeed<=250)
-            {
-                this.changeGear(6);
-                setCurrentSpeed(newSpeed);
-            }
-            else{
-                this.changeGear(7);
-                setCurrentSpeed(newSpeed);
-            }
             changeSpeed(newSpeed, getCurrentDirection());
         }
     }
